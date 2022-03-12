@@ -1,14 +1,30 @@
 const express = require('express');
+const uniqid = require('uniqid');
 const app = express();
 const fs = require('fs');
 const path = require('path');
-const db = require('./db/db.json');
+const { notes } = require('./db/db.json');
 
 const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
+
+const createNewNote = (note, id) => {
+    const newNote = {
+        title: note.title,
+        text: note.text,
+        id: id
+    };
+
+    notes.push(newNote);
+
+    fs.writeFileSync(
+        path.join(__dirname + "/db/db.json"),
+        JSON.stringify({ notes: notes }, null, 2)
+    )
+}
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + './public/index.html'));
@@ -19,7 +35,13 @@ app.get('/notes', (req, res) => {
 })
 
 app.get('/api/notes', (req, res) => {
-    res.json(db);
+    res.json(notes);
+})
+
+app.post('/api/notes', ({ body }, res) => {
+    const id = uniqid();
+    createNewNote(body, id);
+    res.send("success");
 })
 
 app.listen(PORT, () => {

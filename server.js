@@ -52,7 +52,7 @@ app.delete('/api/notes/:id', (req, res) => {
         }
     }
 
-    if (!noteToRemoveIndex) {
+    if (noteToRemoveIndex === undefined) {
         res.status(404).send("Not Found");
         return;
     }

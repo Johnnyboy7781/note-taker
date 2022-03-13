@@ -44,6 +44,27 @@ app.post('/api/notes', ({ body }, res) => {
     res.send("success");
 })
 
+app.delete('/api/notes/:id', (req, res) => {
+    let noteToRemoveIndex;
+    for (let i = 0; i < notes.length; i++) {
+        if (notes[i].id === req.params.id) {
+            noteToRemoveIndex = i;
+        }
+    }
+
+    if (!noteToRemoveIndex) {
+        res.status(404).send("Not Found");
+        return;
+    }
+
+    notes.splice(noteToRemoveIndex, 1);
+    fs.writeFileSync(
+        path.join(__dirname, "/db/db.json"),
+        JSON.stringify({ notes: notes }, null, 2)
+    )
+    res.status(200).send("success");
+})
+
 app.listen(PORT, () => {
     console.log(`API server listening on port ${PORT}`);
 })

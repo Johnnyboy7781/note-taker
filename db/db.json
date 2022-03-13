@@ -1,39 +1,19 @@
 {
   "notes": [
     {
-      "title": "new note",
-      "text": "get grocery",
-      "id": "1lvc048sl0ocmoqh"
+      "title": "Groceries",
+      "text": "- Bananas\n- Cereal\n- Milk",
+      "id": "1lvc01lgl0ppxqzj"
     },
     {
-      "title": "new foot",
-      "text": "get food",
-      "id": "1lvc0h7gl0octxoj"
+      "title": "Groomers",
+      "text": "Take dog to groomers, appt @ 2pm",
+      "id": "1lvc01lgl0ppy6h3"
     },
     {
-      "title": "new foodd",
-      "text": "get food",
-      "id": "1lvc0h7gl0ocu45t"
-    },
-    {
-      "title": "new foodd",
-      "text": "get dog food",
-      "id": "1lvc04k4l0ocvza8"
-    },
-    {
-      "title": "new foodd",
-      "text": "get fog food",
-      "id": "1lvc04k4l0ocw7ny"
-    },
-    {
-      "title": "Funny Note",
-      "text": "Beep Borp",
-      "id": "1lvc04k4l0ocxoiy"
-    },
-    {
-      "title": "aBeepp",
-      "text": "Bleepp",
-      "id": "1lvc04k4l0ocxyu7"
+      "title": "Study",
+      "text": "Study chapters 2, 3, and 4",
+      "id": "1lvc01lgl0ppymsk"
     }
   ]
 }

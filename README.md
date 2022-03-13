@@ -1,14 +1,13 @@
 # Note Taker ✅
+![Heroku](https://pyheroku-badge.herokuapp.com/?app=shrouded-chamber-02704)
 
 ## Purpose
-The backend to a theoretical animal tracking app. You can interact with the api to get animals as well as create new entrie. Visit the deployment on heroku to try it out!
+A note taking app to help you get your tasks in order. Create and delete tasks and then view them later! Stay up to date with Note Taker today!
+
+![Screenshot](./screenshot.PNG)
 
 ## Usage
-Visit the deployment on heroku: https://gentle-plateau-43134.herokuapp.com/api/animals/  
-  
-The provided link will get all the animals from the api.
-
-Add an id on the end to get an animal by their id. For example: https://gentle-plateau-43134.herokuapp.com/api/animals/2
+This application has been deployed to heroku! View the deployment here: https://shrouded-chamber-02704.herokuapp.com/
 
 ## Built With
 * Javascript
